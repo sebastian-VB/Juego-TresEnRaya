@@ -19,6 +19,7 @@ body{
     width: 30%;
     padding: 30px;
     text-align: center;
+    position: relative;
 }
 
 .section1__title{
@@ -40,9 +41,50 @@ body{
 button{
     width: 120px;
     height: 120px;
-    font-size: 40px;
+    font-size: 90px;
     cursor: pointer;
 }
+
+.line{
+    background-color: red;
+    position: absolute;
+    top: 0;
+    border-radius: 15px;
+    display: none;
+}
+
+/*? Para las lineas horizontales*/
+.w1, .w2, .w3{ width: 350px; height: 10px; }
+
+.w1{ top: 150px; left: 80px;}
+.w1-active{ display: block; }
+
+.w2{ top: 270px; left: 80px;}
+.w2-active{ display: block; }
+
+.w3{ top: 390px; left: 80px;}
+.w3-active{ display: block; }
+
+/*? Para las lineas verticales*/
+.w4, .w5, .w6{ width: 10px; height: 350px; }
+
+.w4{ top: 105px; left: 130px; }
+.w4-active{ display: block; }
+
+.w5{ top: 105px; left: 250px; }
+.w5-active{ display: block; }
+
+.w6{ top: 105px; left: 370px; }
+.w6-active{ display: block; }
+
+/*? Para las lineas cruzadas*/
+.w7, .w8{ width: 10px; height: 470px;}
+
+.w7{ transform: rotate(-45deg); top: 50px; left: 255px;}
+.w7-active{ display: block; }
+
+.w8{ transform: rotate(45deg); top: 40px;  left: 255px;}
+.w8-active{ display: block; }
 
 footer{ text-align: center; }
 
