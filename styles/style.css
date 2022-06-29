@@ -66,6 +66,7 @@ body{
     border: 2px solid #fff;
 }
 
+
 .line{
     background-color: #DBE9EE;
     position: absolute;
@@ -132,3 +133,288 @@ footer a{
 }
 
 footer a:hover{ color: rgb(204, 204, 204);}
+
+@media (max-width: 2134px){
+
+    /*? Para las lineas horizontales*/
+    .w1, .w2, .w3{ width: 350px; }
+
+    .w1{ top: 150px; left: 150px;}
+
+    .w2{ top: 277px; left: 150px;}
+
+    .w3{ top: 403px; left: 150px;}
+
+    /*? Para las lineas verticales*/
+    .w4, .w5, .w6{ height: 350px; }
+
+    .w4{ top: 105px; left: 190px; }
+
+    .w5{ top: 105px; left: 310px; }
+
+    .w6{ top: 105px; left: 435px; }
+
+    /*? Para las lineas cruzadas*/
+    .w7, .w8{  height: 470px; }
+
+    .w7{ top: 50px; left: 318px;}
+
+    .w8{ top: 40px;  left: 318px;}
+}
+
+@media (max-width: 1707px){
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ left: 80px;}
+
+    .w2{ left: 80px;}
+
+    .w3{ left: 80px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ left: 125px; }
+
+    .w5{ left: 250px; }
+
+    .w6{ left: 375px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ left: 250px;}
+
+    .w8{  left: 250px;}
+}
+
+@media (max-width: 1550px){
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ left: 50px;}
+
+    .w2{ left: 50px;}
+
+    .w3{ left: 50px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ left: 100px; }
+
+    .w5{ left: 220px; }
+
+    .w6{ left: 335px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ left: 218px;}
+
+    .w8{  left: 218px;}
+}
+
+@media (max-width: 1340px){
+
+    .section1{ width: 40%; margin: 50px auto;}
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ left: 90px;}
+
+    .w2{ left: 90px;}
+
+    .w3{ left: 90px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ left: 140px; }
+
+    .w5{ left: 260px; }
+
+    .w6{ left: 385px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ left: 268px;}
+
+    .w8{  left: 268px;}
+}
+
+@media (max-width: 1200px){
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ top: 150px; left: 65px;}
+
+    .w2{ top: 277px; left: 65px;}
+
+    .w3{ top: 403px; left: 65px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ top: 105px; left: 110px; }
+
+    .w5{ top: 105px; left: 230px; }
+
+    .w6{ top: 105px; left: 345px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ left: 218px;}
+
+    .w8{ left: 218px;}
+}
+
+@media (max-width: 1120px){
+
+}
+
+@media (max-width: 1005px){
+
+    .section1{ width: 45%; }
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ left: 50px;}
+
+    .w2{ left: 50px;}
+
+    .w3{ left: 50px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ left: 98px; }
+
+    .w5{ left: 220px; }
+
+    .w6{ left: 345px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ left: 225px;}
+
+    .w8{ left: 225px;}
+}
+
+@media (max-width: 891px){
+
+    .section1{ width: 50%; }
+
+    /*? Para las lineas verticales*/
+
+    .w4{ left: 95px; }
+
+    .w5{ left: 218px; }
+
+    .w6{ left: 340px; }
+
+}
+
+@media (max-width: 798px){
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ top: 190px; left: 30px;}
+
+    .w2{ top: 320px; left: 30px;}
+
+    .w3{ top: 440px; left: 30px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ top: 140px; left: 70px; }
+
+    .w5{ top: 140px; left: 190px; }
+
+    .w6{ top: 140px; left: 315px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ top: 90px; left: 208px;}
+
+    .w8{ top: 80px;  left: 208px;}
+}
+
+@media (max-width: 768px){
+
+    .section1{ width: 70%; }
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ top: 150px; left: 100px;}
+
+    .w2{ top: 277px; left: 100px;}
+
+    .w3{ top: 403px; left: 100px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ top: 105px; left: 140px; }
+
+    .w5{ top: 105px; left: 265px; }
+
+    .w6{ top: 105px; left: 388px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ top: 50px; left: 265px;}
+
+    .w8{ top: 40px;  left: 265px;}
+    
+}
+
+@media (max-width: 670px){
+
+    /*? Para las lineas horizontales*/
+
+    .w1{ left: 60px;}
+
+    .w2{ left: 60px;}
+
+    .w3{ left: 60px;}
+
+    /*? Para las lineas verticales*/
+
+    .w4{ left: 110px; }
+
+    .w5{ left: 230px; }
+
+    .w6{ left: 345px; }
+
+    /*? Para las lineas cruzadas*/
+
+    .w7{ top: 50px; left: 218px;}
+
+    .w8{ top: 40px;  left: 218px;}
+}
+
+@media (max-width: 580px){
+
+    .section1{ width: 80%;  margin: 50px auto;}
+
+    .table__btn{ width: 100px; height: 100px; font-size: 50px;}
+
+    /*? Para las lineas horizontales*/
+    .w1, .w2, .w3{ width: 280px; }
+    
+    .w1{ top: 140px; left: 90px;}
+    
+    .w2{ top: 247px; left: 90px;}
+    
+    .w3{ top: 350px; left: 90px;}
+    
+    /*? Para las lineas verticales*/
+    .w4, .w5, .w6{ height: 280px; }
+    
+    .w4{ left: 122px; }
+    
+    .w5{ left: 225px; }
+    
+    .w6{ left: 330px; }
+    
+    /*? Para las lineas cruzadas*/
+    .w7, .w8{ height: 370px; }
+    
+    .w7{ top: 65px; left: 225px;}
+    
+    .w8{ top: 60px;  left: 225px;}
+}
