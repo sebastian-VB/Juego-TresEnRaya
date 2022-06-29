@@ -5,10 +5,8 @@
 }
 
 body{
-    height: 90.5vh;
     font-family: sans-serif;
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-    background-repeat: no-repeat;
+    background-color: #4A6FA5;
     color: #fff;
 }
 
@@ -20,6 +18,13 @@ body{
     padding: 30px;
     text-align: center;
     position: relative;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section1__title{
@@ -38,53 +43,84 @@ body{
     font-size: 30px;
 }
 
-button{
+.table__btn{
     width: 120px;
     height: 120px;
     font-size: 90px;
     cursor: pointer;
 }
 
+.section1__btn{
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #166088;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border .3s;
+}
+
+.section1__btn:hover{
+    border: 2px solid #fff;
+}
+
 .line{
-    background-color: red;
+    background-color: #DBE9EE;
     position: absolute;
     top: 0;
     border-radius: 15px;
-    display: none;
+    
 }
 
 /*? Para las lineas horizontales*/
-.w1, .w2, .w3{ width: 350px; height: 10px; }
+.w1, .w2, .w3{ 
+    width: 350px;
+    height: 10px; 
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 98%);
+    transition: clip-path .7s;
+}
 
 .w1{ top: 150px; left: 80px;}
-.w1-active{ display: block; }
+.w1-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
 
-.w2{ top: 270px; left: 80px;}
-.w2-active{ display: block; }
+.w2{ top: 277px; left: 80px;}
+.w2-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
 
-.w3{ top: 390px; left: 80px;}
-.w3-active{ display: block; }
+.w3{ top: 403px; left: 80px;}
+.w3-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
 
 /*? Para las lineas verticales*/
-.w4, .w5, .w6{ width: 10px; height: 350px; }
+.w4, .w5, .w6{ 
+    width: 10px; 
+    height: 350px; 
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .7s;
+}
 
-.w4{ top: 105px; left: 130px; }
-.w4-active{ display: block; }
+.w4{ top: 105px; left: 128px; }
+.w4-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
 
-.w5{ top: 105px; left: 250px; }
-.w5-active{ display: block; }
+.w5{ top: 105px; left: 251px; }
+.w5-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
 
-.w6{ top: 105px; left: 370px; }
-.w6-active{ display: block; }
+.w6{ top: 105px; left: 375px; }
+.w6-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
 
 /*? Para las lineas cruzadas*/
-.w7, .w8{ width: 10px; height: 470px;}
+.w7, .w8{ 
+    width: 10px; 
+    height: 470px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .7s;
+}
 
 .w7{ transform: rotate(-45deg); top: 50px; left: 255px;}
-.w7-active{ display: block; }
+.w7-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
 
 .w8{ transform: rotate(45deg); top: 40px;  left: 255px;}
-.w8-active{ display: block; }
+.w8-active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
 
 footer{ text-align: center; }
 

@@ -6,7 +6,7 @@ let showX_O = true;
 let letter_x = 'x';
 let letter_o = 'o';
 let btnHTML = null;
-let victory = false;
+let count = 0;
 
 let messageX = 'Ganador player 1';
 let messageO = 'Ganador player 2';
@@ -34,14 +34,16 @@ function show(id){
         btnHTML.innerHTML = letter_o;
         arrayTable[id] = letter_o;
         showX_O = true;
+        count++;
     }
     else if(showX_O){
         btnHTML.innerHTML = letter_x;
         arrayTable[id] = letter_x;
         showX_O = false;
+        count++
     }
     
-    console.log(arrayTable);
+    console.log(arrayTable, count);
 
     //0-1-2
     browseX_O(arrayTable[0], arrayTable[1], arrayTable[2], messageX, messageO, 1);
@@ -73,18 +75,22 @@ function show(id){
 //otras funciones
 function browseX_O(figure1, figure2, figure3, texto_X, texto_O, shapeW){
 
-    if(figure1 == 'x' && figure2 == 'x' && figure3 == 'x'){
-        console.log(texto_X);
-        victory = true;
-        showLinesWinner(shapeW);
+    if(count < 9){
+        if(figure1 == 'x' && figure2 == 'x' && figure3 == 'x'){
+            console.log(texto_X);
+            showLinesWinner(shapeW);
+            disableButons();
+        }
+        else if(figure1 == 'o' && figure2 == 'o' && figure3 == 'o'){
+            console.log(texto_O);
+            showLinesWinner(shapeW);
+            disableButons();
+        }
+    }
+    else{
         disableButons();
     }
-    else if(figure1 == 'o' && figure2 == 'o' && figure3 == 'o'){
-        console.log(texto_O);
-        victory = true;
-        showLinesWinner(shapeW);
-        disableButons();
-    }
+
 
 }
 
@@ -206,3 +212,21 @@ function disableButons(){
     }
 
 }
+
+function resetButons(){
+
+    for(let i = 0; i< 9; i++){
+        let buttonTR = document.getElementById(i);
+        buttonTR.innerHTML = '';
+        buttonTR.disabled = false;
+    }
+
+}
+
+document.getElementById('btn-reiniciar').addEventListener('click', ()=>{
+    console.log('Funciona');
+    count = 0;
+    arrayTable = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+    showX_O = true;
+    resetButons();
+})
