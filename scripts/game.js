@@ -6,7 +6,7 @@ let showX_O = true;
 let letter_x = 'x';
 let letter_o = 'o';
 let btnHTML = null;
-let count = 0;
+let count = -1;
 
 let messageX = 'El ganador es: Jugador1';
 let messageO = 'El ganador es: Jugador2';
@@ -75,7 +75,7 @@ function show(id){
 //otras funciones
 function browseX_O(figure1, figure2, figure3, texto_X, texto_O, shapeW){
 
-    if(count < 9){
+    if(count <= 8){
         if(figure1 == 'x' && figure2 == 'x' && figure3 == 'x'){
             console.log(texto_X);
             gameOver(texto_X)
@@ -88,6 +88,7 @@ function browseX_O(figure1, figure2, figure3, texto_X, texto_O, shapeW){
             showLinesWinner(shapeW);
             disableButons();
         }
+        console.log(count);
     }
     else{
         disableButons();
@@ -247,7 +248,7 @@ document.getElementById('btn-gameOver').addEventListener('click', ()=>{
 })
 
 function resetGame(){
-    count = 0;
+    count = -1;
     arrayTable = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
     showX_O = true;
     resetButons();
