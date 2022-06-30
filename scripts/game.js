@@ -8,8 +8,8 @@ let letter_o = 'o';
 let btnHTML = null;
 let count = 0;
 
-let messageX = 'Ganador player 1';
-let messageO = 'Ganador player 2';
+let messageX = 'El ganador es: Jugador1';
+let messageO = 'El ganador es: Jugador2';
 
 let arrayTable = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 
@@ -78,11 +78,13 @@ function browseX_O(figure1, figure2, figure3, texto_X, texto_O, shapeW){
     if(count < 9){
         if(figure1 == 'x' && figure2 == 'x' && figure3 == 'x'){
             console.log(texto_X);
+            gameOver(texto_X)
             showLinesWinner(shapeW);
             disableButons();
         }
         else if(figure1 == 'o' && figure2 == 'o' && figure3 == 'o'){
             console.log(texto_O);
+            gameOver(texto_O)
             showLinesWinner(shapeW);
             disableButons();
         }
@@ -92,6 +94,15 @@ function browseX_O(figure1, figure2, figure3, texto_X, texto_O, shapeW){
     }
 
 
+}
+
+function gameOver(texto){
+
+    document.getElementById('winner').innerHTML = texto;
+
+    setInterval(()=>{
+        document.getElementById('gameOver').classList.add('gameOverPanel');
+    }, 1500);
 }
 
 function showLinesWinner(line){
@@ -225,8 +236,31 @@ function resetButons(){
 
 document.getElementById('btn-reiniciar').addEventListener('click', ()=>{
     console.log('Funciona');
+    resetGame();    
+})
+
+document.getElementById('btn-gameOver').addEventListener('click', ()=>{
+    console.log('Funciona');
+    // document.getElementById('gameOver').classList.remove('gameOverPanel');    
+    // resetGame();
+    location.reload();
+})
+
+function resetGame(){
     count = 0;
     arrayTable = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
     showX_O = true;
     resetButons();
-})
+    resetLines();
+}
+
+function resetLines(){
+    compLine1.classList.remove('w1-active');
+    compLine2.classList.remove('w2-active');
+    compLine3.classList.remove('w3-active');
+    compLine4.classList.remove('w4-active');
+    compLine5.classList.remove('w5-active');
+    compLine6.classList.remove('w6-active');
+    compLine7.classList.remove('w7-active');
+    compLine8.classList.remove('w8-active');
+}
